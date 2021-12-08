@@ -1,34 +1,17 @@
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import LayoutDash from '../components/LayoutDash'
 import Layout from '../components/LayoutDash'
 const Home = () => {
+  const router = useRouter()
+
+  useEffect(() => {
+    router.push('/home')
+  })
   return (
     <LayoutDash>
       <div className="space-y-4">
-        <h1 className="font-medium">Content Home</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
-          consequatur impedit obcaecati cupiditate suscipit tempore a earum
-          velit? Consequatur quo aut optio magnam velit officiis saepe eaque qui
-          quos perspiciatis?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
-          consequatur impedit obcaecati cupiditate suscipit tempore a earum
-          velit? Consequatur quo aut optio magnam velit officiis saepe eaque qui
-          quos perspiciatis? Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Veritatis consequatur impedit obcaecati cupiditate suscipit
-          tempore a earum velit? Consequatur quo aut optio magnam velit officiis
-          saepe eaque qui quos perspiciatis? Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Veritatis consequatur impedit obcaecati
-          cupiditate suscipit tempore a earum velit? Consequatur quo aut optio
-          magnam velit officiis saepe eaque qui quos perspiciatis?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
-          consequatur impedit obcaecati cupiditate suscipit tempore a earum
-          velit? Consequatur quo aut optio magnam velit officiis saepe eaque qui
-          quos perspiciatis?
-        </p>
+        <h1 className="font-medium">Redirecionado para /home</h1>
       </div>
     </LayoutDash>
   )
